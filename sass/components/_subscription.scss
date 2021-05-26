@@ -1,0 +1,37 @@
+.subscription { margin-left: auto; }
+
+.subscription__wrapper { 
+   display: flex;
+   align-items: center;
+}
+
+.subscription__button {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 200px;
+   height: 50px;
+   padding-left: 28px;
+   padding-right: 29px;
+   margin-left: 12px;
+
+   &:hover,
+   &:focus {
+      @extend %bcg-focus;
+   }
+}
+
+.subscription__button::after .subscription__icon {
+   width: 24px;
+   height: 24px;
+
+   content: "";
+}
+
+.subscription__icon {
+   width: 24px;
+   height: 24px;
+   margin-left: 10px;
+
+   fill: var(--body-hero-color);
+}

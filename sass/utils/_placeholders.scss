@@ -1,0 +1,21 @@
+%accent-color { color: var(--accent-color); }
+
+%accent-fill { fill: var(--accent-color); }
+
+%bcg-focus { background-color: var(--btn-bcg-focus); }
+
+%border-accent {
+   border: 1px solid var(--accent-color);
+   outline: none;
+}
+
+%border-modal {
+   border: 1px solid var(--modal-fields-border);
+   border-radius: 4px;
+   transition: border var(--trans-duration) var(--trans-timing);
+}
+
+%uppercase-text {
+   font-weight: 700;
+   text-transform: uppercase;
+}

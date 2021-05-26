@@ -1,0 +1,36 @@
+.filter { 
+   display: flex;
+   justify-content: center;
+   margin-bottom: 50px;
+
+   text-align: center; 
+}
+
+.filter-item:not(:last-child) { margin-right: 8px; }
+
+.filter__button {
+   display: inline-block;
+   min-width: 73px;
+   padding: 6px 22px;
+
+   font-size: 16px;
+   font-weight: 500;
+   line-height: 1.6;
+   color: var(--title-color);
+   text-align: center;
+
+   background-color: var(--bcg-team-color);
+   border: 1px solid transparent;
+   border-radius: 4px;
+   box-shadow: none;
+   transition: color var(--trans-duration) var(--trans-timing), background-color var(--trans-duration) var(--trans-timing), box-shadow var(--trans-duration) var(--trans-timing);
+}
+
+.filter__button--current,
+.filter__button:hover,
+.filter__button:focus {
+   color: var(--body-hero-color);
+
+   background-color: var(--accent-color);
+   box-shadow: var(--portfolio-btn-shadow);
+}

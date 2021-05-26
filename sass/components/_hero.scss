@@ -1,0 +1,36 @@
+.hero { 
+   height: 600px;
+   max-width: 1600px;
+   padding-top: 200px;
+   padding-bottom: 200px;
+   margin-left: auto;
+   margin-right: auto;
+
+   text-align: center; 
+
+   background-color: var(--bcg-hero-color);
+   background-image: linear-gradient(to top, var(--hero-overlay)), url(../images/hero.jpg);
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+.hero__title {
+   margin-bottom: 30px;
+
+   font-size: 44px;
+   font-weight: 900;
+   line-height: 1.4;
+   letter-spacing: .06em;
+   color: var(--body-hero-color);
+   text-transform: uppercase;
+}
+
+.hero__indent { display: block; }
+
+.hero__button {
+   &:hover,
+   &:focus {
+      @extend %bcg-focus;
+   }
+}

@@ -1,0 +1,19 @@
+.footer-links {
+   padding: 60px 15px;
+   margin: 0 auto;
+
+   background-color: var(--bcg-footer-color);
+}
+
+.container__footer-links { 
+   display: flex;
+   width: 1200px;
+   align-items: baseline;
+   flex-wrap: nowrap;
+
+   font-family: var(--main-font); 
+}
+
+.address-links { 
+   margin-top: 20px; 
+}

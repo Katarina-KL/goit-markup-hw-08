@@ -1,0 +1,30 @@
+.logo {
+   font-family: var(--logo-font);
+   font-size: 26px;
+   font-weight: 700;
+   line-height: 1.2;
+
+   &:hover,
+   &:focus {
+      @extend %accent-color;
+   }
+}
+
+.logo--accent { @extend %accent-color; }
+
+.header-links__logo {
+   padding-top: 24px;
+   padding-bottom: 25px;
+}
+
+.logo--header {
+   color: var(--header-studio-color);
+
+   transition: color var(--trans-duration) var(--trans-timing);
+}
+
+.logo--footer {
+   color: var(--body-hero-color);
+
+   transition: color var(--trans-duration) var(--trans-timing);
+}

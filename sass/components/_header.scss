@@ -1,0 +1,13 @@
+.header-links {
+   font-size: 14px;
+   font-weight: 500;
+   line-height: 1.14;
+   letter-spacing: .02em;
+
+   border: 1px solid var(--header-border);
+}
+
+.header-links__contacts { 
+   display: flex; 
+   margin-left: auto;
+}
