@@ -19,13 +19,13 @@
    &:focus {
       @extend %bcg-focus;
    }
-}
 
-.subscription__button::after .subscription__icon {
-   width: 24px;
-   height: 24px;
+   &::after .subscription__icon {
+      width: 24px;
+      height: 24px;
 
-   content: "";
+      content: "";
+   }
 }
 
 .subscription__icon {

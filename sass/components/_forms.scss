@@ -17,8 +17,13 @@
 
    @extend %border-modal;  
 
-   &:focus {
-      @extend %border-accent;
+   &:focus { @extend %border-accent; }
+
+   &:focus:invalid {
+      color: red;
+      fill: red;
+
+      border-color: red;
    }
 }
 
@@ -32,9 +37,16 @@
 
    fill: var(--title-color);
    transition: fill var(--trans-duration) var(--trans-timing);
-}
 
-.form__input:focus + .form__icon { @extend %accent-fill; }
+   .form__input:focus + & { @extend %accent-fill; }
+   
+   .form__input:focus:invalid + & {
+      color: red;
+      fill: red;
+
+      border-color: red;
+   }
+}
 
 .form__field-footer { margin-top: 0; }
 
@@ -43,6 +55,8 @@
    height: 50px;
    padding: 15px 16px;
 
+   color: var(--body-hero-color);
+
    background: transparent;
    border: 1px solid var(--border-footer-mail);
    border-radius: 4px;
@@ -50,23 +64,18 @@
    filter: var(--input-footer-mail);
    transition: border var(--trans-duration) var(--trans-timing);
 
-   &:focus { 
-      @extend %border-accent;
+   &::placeholder {
+      font-size: 16px;
+      line-height: 1.25;
+      color: var(--placeholder-footer);
    }
-}
 
-.form__input-footer,
-.form__input-footer::placeholder {
-   font-size: 16px;
-   line-height: 1.25;
-   color: var(--placeholder-footer);
-}
+   &:focus { @extend %border-accent; }
 
-.form__input-footer:focus:invalid,
-.form__input:focus:invalid + .form__icon,
-.form__input:focus:invalid {
-   color: red;
-   fill: red;
+   &:focus:invalid {
+      color: red;
+      fill: red;
 
-   border-color: red;
+      border-color: red;
+   }
 }

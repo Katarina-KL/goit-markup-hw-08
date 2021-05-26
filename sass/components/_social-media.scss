@@ -5,7 +5,7 @@
    list-style: none; 
 }
 
-.social-media__item:not(:last-child) { margin-right: 10px; }
+.social-media__item { &:not(:last-child) { margin-right: 10px; } }
 
 .social-media__link {
    display: flex;

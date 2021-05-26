@@ -6,7 +6,7 @@
    text-align: center; 
 }
 
-.filter-item:not(:last-child) { margin-right: 8px; }
+.filter-item { &:not(:last-child) { margin-right: 8px; } }
 
 .filter__button {
    display: inline-block;
@@ -24,13 +24,13 @@
    border-radius: 4px;
    box-shadow: none;
    transition: color var(--trans-duration) var(--trans-timing), background-color var(--trans-duration) var(--trans-timing), box-shadow var(--trans-duration) var(--trans-timing);
-}
 
-.filter__button--current,
-.filter__button:hover,
-.filter__button:focus {
-   color: var(--body-hero-color);
+   &--current,
+   &:hover,
+   &:focus {
+      color: var(--body-hero-color);
 
-   background-color: var(--accent-color);
-   box-shadow: var(--portfolio-btn-shadow);
+      background-color: var(--accent-color);
+      box-shadow: var(--portfolio-btn-shadow);
+   }
 }
