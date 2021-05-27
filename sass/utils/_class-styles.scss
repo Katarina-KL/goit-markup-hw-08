@@ -6,13 +6,26 @@
 
 .link { text-decoration: none; }
 
-.section { padding: 94px 0; }
+.section { 
+   padding-top: 60px;
+   padding-bottom: 60px;
+
+   @media screen and (min-width: 1200px) { padding: 94px 0; }
+
+   @media screen and (min-width: 1200px) { .main-title { margin-bottom: 50px; } }
+}
 
 .container {
-   width: 1200px;
+   width: 100%;
    padding-left: 15px;
    padding-right: 15px;
    margin: 0 auto;
+
+   @media screen and (min-width: 480px) { max-width: 480px; background-color: turquoise; }
+
+   @media screen and (min-width: 768px) { max-width: 768px; background-color: rebeccapurple; }
+
+   @media screen and (min-width: 1200px) { max-width: 1200px; background-color: yellow; }
 }
 
 .visually-hidden {
@@ -51,12 +64,14 @@
    transition: background-color var(--trans-duration) var(--trans-timing);
 }
 
-.main__title {
-   margin-bottom: 50px;
+.main-title {
+   margin-bottom: 30px;
 
-   font-size: 36px;
+   font-size: 28px;
    font-weight: 700;
    line-height: 1.2;
    color: var(--title-color);
    text-align: center;
+
+   @media screen and (min-width: 1200px) { font-size: 36px; }
 }

@@ -1,4 +1,10 @@
-.section__examples { padding-top: 0; }
+.section__examples { 
+   padding-top: 0; 
+
+   .main-title { font-size: 36px; }
+
+   @media screen and (max-width: 1199.98px) { display: none; }
+}
 
 .examples { display: flex; }
 
