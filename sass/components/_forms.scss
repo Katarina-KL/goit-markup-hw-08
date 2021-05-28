@@ -51,8 +51,8 @@
 .form__field-footer { margin-top: 0; }
 
 .form__input-footer {
-   width: 358px;
    height: 50px;
+   margin-bottom: 20px;
    padding: 15px 16px;
 
    color: var(--body-hero-color);
@@ -77,5 +77,16 @@
       fill: red;
 
       border-color: red;
+   }
+
+   @media screen and (min-width: 480px) and (max-width: 1199.98px) {
+   width: 450px;
+   margin-left: auto;
+   margin-right: auto;
+   }
+
+   @media screen and (min-width: 1200px) { 
+      width: 358px;
+      margin-bottom: 0; 
    }
 }

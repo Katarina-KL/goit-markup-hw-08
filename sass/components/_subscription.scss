@@ -1,8 +1,14 @@
-.subscription { margin-left: auto; }
+.subscription { 
+   margin-left: auto;
+   margin-right: auto;
+}
 
 .subscription__wrapper { 
    display: flex;
    align-items: center;
+   flex-wrap: wrap;
+
+   @media screen and (min-width: 1200px) { flex-wrap: nowrap; }
 }
 
 .subscription__button {
@@ -13,7 +19,6 @@
    height: 50px;
    padding-left: 28px;
    padding-right: 29px;
-   margin-left: 12px;
 
    &:hover,
    &:focus {
@@ -26,6 +31,8 @@
 
       content: "";
    }
+
+   @media screen and (min-width: 1200px) { margin-left: 12px; }
 }
 
 .subscription__icon {

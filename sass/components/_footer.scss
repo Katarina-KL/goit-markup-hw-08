@@ -3,13 +3,16 @@
    padding-bottom: 60px;
 
    background-color: var(--bcg-footer-color);
+
+   @media screen and (max-width: 1200px) { text-align: center; }
 }
 
 .container__footer-links { 
    display: flex;
    width: 1200px;
    align-items: baseline;
-   flex-wrap: nowrap;
+   flex-wrap: wrap;
+   justify-content: center;
 
    font-family: var(--main-font); 
 }
