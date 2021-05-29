@@ -170,7 +170,7 @@ img {
   }
 }
 
-.logo:hover, .logo:focus, .logo--accent, .site-nav__link:hover, .site-nav__link:focus, .contacts__link:hover, .contacts__link:focus, .contacts__link-footer:hover, .contacts__link-footer:focus, .modal__terms {
+.logo:hover, .logo:focus, .logo--accent, .site-nav__item .site-nav__link:hover, .site-nav__item .site-nav__link:focus, .contacts__link:hover, .contacts__link:focus, .contacts__link-footer:hover, .contacts__link-footer:focus, .modal__terms {
   color: var(--accent-color);
 }
 
@@ -202,9 +202,15 @@ img {
 
 .logo {
   font-family: var(--logo-font);
-  font-size: 26px;
+  font-size: 24px;
   font-weight: 700;
   line-height: 1.2;
+}
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+  }
 }
 
 .header-links__logo {
@@ -230,14 +236,16 @@ img {
 
 .site-nav {
   display: flex;
-  margin-left: 93px;
+  margin-left: 88px;
 }
 
-.site-nav__item:not(:last-child) {
-  margin-right: 50px;
+@media screen and (min-width: 768px) {
+  .site-nav__item:not(:last-child) {
+    margin-right: 50px;
+  }
 }
 
-.site-nav__link {
+.site-nav__item .site-nav__link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -245,12 +253,12 @@ img {
   transition: color var(--trans-duration) var(--trans-timing);
 }
 
-.site-nav__link--current {
+.site-nav__item .site-nav__link--current {
   position: relative;
   color: var(--accent-color);
 }
 
-.site-nav__link--current::after {
+.site-nav__item .site-nav__link--current::after {
   position: absolute;
   bottom: 0;
   display: block;
@@ -261,24 +269,43 @@ img {
   content: "";
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 480px) and (max-width: 1199.98px) {
   .header-links__contacts {
     flex-direction: column;
   }
 }
 
-.contacts__item + .contacts__item {
-  margin-left: 50px;
+@media screen and (min-width: 768px) {
+  .contacts__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts__item + .contacts__item {
+    margin-left: 50px;
+  }
 }
 
 .contacts__link {
   width: 100%;
-  display: flex;
   align-items: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
   color: var(--main-text-color);
   transition: color var(--trans-duration) var(--trans-timing);
+}
+
+@media screen and (max-width: 1199.98px) {
+  .contacts__link {
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts__link {
+    display: flex;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
 
 .contacts__icon {
@@ -293,9 +320,14 @@ img {
 
 @media screen and (max-width: 1199px) {
   .contacts-block {
-    margin-left: auto;
-    margin-right: auto;
     margin-bottom: 60px;
+    width: 354px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .contacts-block {
+    justify-content: flex-start;
   }
 }
 
@@ -543,6 +575,13 @@ img {
   transition: transform var(--trans-duration) var(--trans-timing), opacity var(--trans-duration) var(--trans-timing);
 }
 
+@media screen and (max-width: 1199.98px) {
+  .modal {
+    width: 450px;
+    height: 609px;
+  }
+}
+
 .modal__close-button {
   position: absolute;
   top: 8px;
@@ -603,22 +642,29 @@ img {
   display: inline-block;
   justify-content: center;
   margin-top: 20px;
-  font-size: 14px;
+  text-align: start;
+  font-size: 12px;
   line-height: 1.7;
-  text-align: center;
+  white-space: nowrap;
 }
 
 .modal__checkbox-label::before {
   display: inline-block;
   width: 16px;
   height: 15px;
-  margin-right: 5px;
+  margin-right: 3px;
   cursor: pointer;
   border: 2px solid var(--title-color);
   border-radius: 2px;
   content: "";
   transform: translateY(15%);
   transition: border var(--trans-duration) var(--trans-timing);
+}
+
+@media screen and (min-width: 1200px) {
+  .modal__checkbox-label {
+    font-size: 14px;
+  }
 }
 
 .modal__checkbox:checked + .modal__checkbox-label::before {
@@ -687,6 +733,12 @@ img {
   font-size: 14px;
   line-height: 1.14;
   color: var(--title-color);
+}
+
+@media screen and (max-width: 767.98px) {
+  .benefits__title {
+    text-align: center;
+  }
 }
 
 .benefits__text {
@@ -875,7 +927,7 @@ img {
 
 .container__footer-links {
   display: flex;
-  width: 1200px;
+  max-width: 1200px;
   align-items: baseline;
   flex-wrap: wrap;
   justify-content: center;
@@ -895,11 +947,13 @@ img {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  flex-direction: column;
 }
 
 @media screen and (min-width: 1200px) {
   .subscription__wrapper {
     flex-wrap: nowrap;
+    flex-direction: row;
   }
 }
 
@@ -911,6 +965,8 @@ img {
   height: 50px;
   padding-left: 28px;
   padding-right: 29px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .subscription__button::after .subscription__icon {

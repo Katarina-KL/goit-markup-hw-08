@@ -9,12 +9,14 @@
 
 .container__footer-links { 
    display: flex;
-   width: 1200px;
+   max-width: 1200px;
    align-items: baseline;
    flex-wrap: wrap;
    justify-content: center;
 
    font-family: var(--main-font); 
+
+   
 }
 
 .address-links { margin-top: 20px; }

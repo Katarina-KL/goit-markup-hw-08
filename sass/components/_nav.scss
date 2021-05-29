@@ -6,10 +6,12 @@
 
 .site-nav { 
    display: flex;
-   margin-left: 93px;
+   margin-left: 88px;
 }
 
-.site-nav__item { &:not(:last-child) { margin-right: 50px; } }
+.site-nav__item { &:not(:last-child) {
+   @media screen and (min-width: 768px) { margin-right: 50px; } 
+}
 
 .site-nav__link { 
    display: block;
@@ -42,4 +44,4 @@
       border-radius: 2px;
       content: "";
    }
-}
+} }

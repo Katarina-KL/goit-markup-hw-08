@@ -1,12 +1,16 @@
 .logo {
    font-family: var(--logo-font);
-   font-size: 26px;
+   font-size: 24px;
    font-weight: 700;
    line-height: 1.2;
 
    &:hover,
    &:focus {
       @extend %accent-color;
+   }
+
+   @media screen and (min-width: 1200px) {
+      font-size: 26px;
    }
 }
 
