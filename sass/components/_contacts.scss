@@ -27,7 +27,8 @@
 
    @media screen and (max-width: 1199.98px) { font-size: 12px; }
 
-   @media screen and (min-width: 1200px) { display: flex; 
+   @media screen and (min-width: 1200px) { 
+      display: flex; 
       padding-top: 32px;
       padding-bottom: 32px;
    } 
@@ -41,13 +42,19 @@
 
 .contacts-block {
    width: 270px;
-   margin-right: 30px;
+
    @media screen and (max-width: 1199px) {
       margin-bottom: 60px;
       width: 354px;
    }
 
    @media screen and (min-width: 768px) and (max-width: 1199.98px) { justify-content: flex-start; }
+
+   @media screen and (min-width: 1200px) { margin-right: 30px; }
+}
+
+.contacts-block:first-child { 
+   @media screen and (min-width: 768px) and (max-width: 1199.98px) { margin-right: 30px; }
 }
 
 .contacts__item-footer {
