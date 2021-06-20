@@ -15,6 +15,34 @@
    .container { padding: 0; }
 }
 
+.mob-menu-contacts__item,
+.mob-menu__item {
+   &:not(:first-child) { margin-top: 32px; }
+}
+
+.mob-menu__link {
+   font-size: 40px;
+   line-height: 1.17;
+   color: var(--title-color);
+}
+
+.mob-menu-contacts { 
+   margin-top: auto;
+   margin-bottom: 64px;
+}
+
+.mob-menu-contacts__link { line-height: .85; }
+
+.mob-menu-contacts__link--tel {
+   font-size: 34px;
+   @extend %accent-color;
+}
+
+.mob-menu-contacts__link--mail {
+   font-size: 24px;
+   color: var(--main-text-color);
+}
+
 .mob-menu__btn {
    width: 40px;
    height: 40px;
@@ -26,16 +54,7 @@
    @media screen and (min-width:768px) { display: none; }
 }
 
-.mob-menu__link {
-   display: flex;
 
-   font-size: 40px;
-   line-height: 1.17;
-   letter-spacing: .02em;
-   color: var(--title-color);
-
-   &:not(:first-child) { margin-top: 32px; }
-}
 /*.mob-menu-btn__icon 
 
 %accent-color 

@@ -55,3 +55,24 @@
    background-color: var(--bcg-footer-icons); 
    transition: background-color var(--trans-duration) var(--trans-timing);
 }
+
+.mob-menu__social-media {
+   display: inline-block;
+
+   .social-media__link { 
+      font-size: 18px;
+      line-height: 1.22;
+      @extend %accent-color;
+
+      width: 0; 
+      height: 0; 
+   }
+
+   .social-media__item:not(:last-child)::after {
+      content: "";
+      font-size: 18px;
+      margin-left: 10px;
+      margin-right: 10px;
+      border: 1px solid rgba(33,33,33,0.2);
+   }
+}
