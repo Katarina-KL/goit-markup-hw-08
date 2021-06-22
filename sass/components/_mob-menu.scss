@@ -24,26 +24,49 @@
    font-size: 40px;
    line-height: 1.17;
    color: var(--title-color);
+
+   transition: color var(--trans-duration) var(--trans-timing);
+
+   &:hover,
+   &:focus {
+      @extend %accent-color;
+   }
 }
 
 .mob-menu-contacts { 
-   margin-top: auto;
+   margin-top: 80px;
    margin-bottom: 64px;
 }
 
-.mob-menu-contacts__link { line-height: .85; }
-
 .mob-menu-contacts__link--tel {
    font-size: 34px;
+   line-height: .85; 
    @extend %accent-color;
+
+   transition: color var(--trans-duration) var(--trans-timing);
+
+   &:hover,
+   &:focus {
+      color: var(--main-text-color);
+   }
 }
 
 .mob-menu-contacts__link--mail {
    font-size: 24px;
+   line-height: .85; 
    color: var(--main-text-color);
+
+   transition: color var(--trans-duration) var(--trans-timing);
+
+   &:hover,
+   &:focus {
+      @extend %accent-color;
+   }
 }
 
 .mob-menu__btn {
+   top: 10px;
+   right: 15px;
    width: 40px;
    height: 40px;
 
@@ -54,9 +77,11 @@
    @media screen and (min-width:768px) { display: none; }
 }
 
+.mob-menu__icon { 
+   transition: fill var(--trans-duration) var(--trans-timing);
 
-/*.mob-menu-btn__icon 
-
-%accent-color 
-
-%accent-fill */
+   &:hover,
+   &:focus {
+      @extend %accent-fill;
+   }
+}

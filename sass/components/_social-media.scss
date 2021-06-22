@@ -56,23 +56,29 @@
    transition: background-color var(--trans-duration) var(--trans-timing);
 }
 
-.mob-menu__social-media {
-   display: inline-block;
+.mob-menu__socials { 
+   width: 375;
+   display: inline-flex;
+   flex-wrap: wrap;
+}
 
-   .social-media__link { 
-      font-size: 18px;
-      line-height: 1.22;
-      @extend %accent-color;
+.socials__link { 
+   font-size: 18px;
+   line-height: 1.22;
+   @extend %accent-color;
 
-      width: 0; 
-      height: 0; 
+   transition: color var(--trans-duration) var(--trans-timing);
+
+   &:hover,
+   &:focus {
+      color: var(--header-studio-color);
    }
+}
 
-   .social-media__item:not(:last-child)::after {
-      content: "";
-      font-size: 18px;
-      margin-left: 10px;
-      margin-right: 10px;
-      border: 1px solid rgba(33,33,33,0.2);
-   }
+.socials__item:not(:last-child)::after {
+   content: "";
+   font-size: 18px;
+   margin-left: 10px;
+   margin-right: 10px;
+   border: var(--socials-line);
 }
