@@ -17,6 +17,8 @@
 .logo--accent { @extend %accent-color; }
 
 .header-links__logo {
+   position: relative;
+
    padding-top: 24px;
    padding-bottom: 25px;
 }

@@ -55,30 +55,3 @@
    background-color: var(--bcg-footer-icons); 
    transition: background-color var(--trans-duration) var(--trans-timing);
 }
-
-.mob-menu__socials { 
-   width: 375;
-   display: inline-flex;
-   flex-wrap: wrap;
-}
-
-.socials__link { 
-   font-size: 18px;
-   line-height: 1.22;
-   @extend %accent-color;
-
-   transition: color var(--trans-duration) var(--trans-timing);
-
-   &:hover,
-   &:focus {
-      color: var(--header-studio-color);
-   }
-}
-
-.socials__item:not(:last-child)::after {
-   content: "";
-   font-size: 18px;
-   margin-left: 10px;
-   margin-right: 10px;
-   border: var(--socials-line);
-}
